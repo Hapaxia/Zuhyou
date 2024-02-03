@@ -30,3 +30,4 @@
 #pragma once
 
 #include "Line.hpp"
+#include "Grid.hpp"
