@@ -51,7 +51,7 @@ inline Line<T>::Line()
 }
 
 template<class T>
-inline void Line<T>::setNumberOfValues(std::size_t numberOfValues)
+inline void Line<T>::setNumberOfValues(const std::size_t numberOfValues)
 {
 	m_isUpdateRequired = true;
 	m_values.resize(numberOfValues);
@@ -67,7 +67,7 @@ inline void Line<T>::setValues(const std::vector<T>&& values)
 	m_values = std::move(values);
 }
 template<class T>
-inline void Line<T>::setValue(std::size_t index, const T& value)
+inline void Line<T>::setValue(const std::size_t index, const T& value)
 {
 	if (index >= m_values.size())
 		throw(Exception("Unable to set value; invalid index."));
@@ -94,7 +94,7 @@ inline std::size_t Line<T>::getNumberOfValues() const
 	return m_values.size();
 }
 template<class T>
-inline T Line<T>::getValue(std::size_t index) const
+inline T Line<T>::getValue(const std::size_t index) const
 {
 	if (index >= m_values.size())
 		throw(Exception("Unable to get value; invalid index."));
@@ -113,31 +113,31 @@ inline T Line<T>::getMaxValue() const
 }
 
 template<class T>
-inline void Line<T>::setSize(sf::Vector2f size)
+inline void Line<T>::setSize(const sf::Vector2f size)
 {
 	m_isUpdateRequired = true;
 	m_size = size;
 }
 template<class T>
-inline void Line<T>::setLineColor(sf::Color lineColor)
+inline void Line<T>::setLineColor(const sf::Color lineColor)
 {
 	m_isUpdateRequired = true;
 	m_lineColor = lineColor;
 }
 template<class T>
-inline void Line<T>::setAreaColor(sf::Color areaColor)
+inline void Line<T>::setAreaColor(const sf::Color areaColor)
 {
 	m_isUpdateRequired = true;
 	m_areaColor = areaColor;
 }
 template<class T>
-inline void Line<T>::setShowLine(bool showLine)
+inline void Line<T>::setShowLine(const bool showLine)
 {
 	m_isUpdateRequired = true;
 	m_showLine = showLine;
 }
 template<class T>
-inline void Line<T>::setShowArea(bool showArea)
+inline void Line<T>::setShowArea(const bool showArea)
 {
 	m_isUpdateRequired = true;
 	m_showArea = showArea;
