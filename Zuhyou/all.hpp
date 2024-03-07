@@ -31,3 +31,4 @@
 
 #include "Line.hpp"
 #include "Grid.hpp"
+#include "Bar.hpp"
