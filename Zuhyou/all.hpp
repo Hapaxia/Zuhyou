@@ -32,3 +32,4 @@
 #include "Line.hpp"
 #include "Grid.hpp"
 #include "Bar.hpp"
+#include "Function.hpp"
