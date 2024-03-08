@@ -7,6 +7,7 @@ by [Hapaxia](http://github.com/Hapaxia)
 
 Currently includes:
 - Line graph (also doubles as an Area graph)
+- Bar graph
 - Grid
 
 (more to be added...)
