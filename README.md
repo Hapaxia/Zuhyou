@@ -8,6 +8,7 @@ by [Hapaxia](http://github.com/Hapaxia)
 Currently includes:
 - Line graph (also doubles as an Area graph)
 - Bar graph
+- Function graph (plots "y=" function)
 - Grid
 
 (more to be added...)
