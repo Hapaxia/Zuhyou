@@ -70,6 +70,10 @@ public:
 
 
 
+
+
+
+
 private:
 	mutable bool m_isUpdateRequired;
 	mutable std::vector<sf::Vertex> m_vertices;
