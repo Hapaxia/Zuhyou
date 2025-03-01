@@ -18,7 +18,7 @@ Line and Grid both shown in the Zuhyou logo.
 ## Note
 Zuhyou is published under the zlib [licence][Licence].  
 <sup>
-These objects require C++11 (or later) and [SFML] version 2.  
+These objects require C++ and [SFML] version 3.  
 
 
 

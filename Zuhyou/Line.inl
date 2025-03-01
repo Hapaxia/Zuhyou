@@ -2,7 +2,7 @@
 //
 // Zuhyou (https://github.com/Hapaxia/Zuhyou)
 //
-// Copyright(c) 2023-2024 M.J.Silk
+// Copyright(c) 2023-2025 M.J.Silk
 //
 // This software is provided 'as-is', without any express or implied
 // warranty. In no event will the authors be held liable for any damages
@@ -185,7 +185,7 @@ inline void Line<T>::draw(sf::RenderTarget& target, sf::RenderStates states) con
 		priv_updateVertices();
 
 	if (m_showArea)
-		target.draw(m_areaVertices.data(), m_areaVertices.size(), sf::PrimitiveType::TrianglesStrip, states);
+		target.draw(m_areaVertices.data(), m_areaVertices.size(), sf::PrimitiveType::TriangleStrip, states);
 	if (m_showLine)
 		target.draw(m_lineVertices.data(), m_lineVertices.size(), sf::PrimitiveType::LineStrip, states);
 }
