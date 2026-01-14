@@ -55,20 +55,24 @@ public:
 	void setMaxXValue(const T& maxXValue);
 	void setMinYValue(const T& minYValue);
 	void setMaxYValue(const T& maxYValue);
+	void setLimitRect(const sf::Rect<T>& limitRect);
 
 	T getMinXValue() const;
 	T getMaxXValue() const;
 	T getMinYValue() const;
 	T getMaxYValue() const;
+	sf::Rect<T> getLimitRect() const;
 
 
 
 	// axes
 	void setXAxisValue(const T& xAxisValue);
 	void setYAxisValue(const T& yAxisValue);
+	void setAxisPosition(const sf::Vector2<T>& axisPosition);
 
 	T getXAxisValue() const;
 	T getYAxisValue() const;
+	sf::Vector2<T> getAxisPosition() const;
 
 
 

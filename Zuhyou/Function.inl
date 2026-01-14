@@ -93,6 +93,15 @@ inline void Function<T>::setMaxYValue(const T& maxYValue)
 }
 
 template<class T>
+inline void Function<T>::setLimitRect(const sf::Rect<T>& limitRect)
+{
+	setMinXValue(limitRect.position.x);
+	setMinYValue(limitRect.position.y);
+	setMaxXValue(limitRect.position.x + limitRect.size.x);
+	setMaxYValue(limitRect.position.y + limitRect.size.y);
+}
+
+template<class T>
 inline T Function<T>::getMinXValue() const
 {
 	return m_minXValue;
@@ -114,6 +123,15 @@ inline T Function<T>::getMaxYValue() const
 }
 
 template<class T>
+inline sf::Rect<T> Function<T>::getLimitRect() const
+{
+	const T minX{ getMinXValue() };
+	const T minY{ getMinYValue() };
+	const sf::Vector2<T> size{ getMaxXValue() - minX, getMaxYValue() - minY };
+	return { { minX, minY }, size };
+}
+
+template<class T>
 inline void Function<T>::setXAxisValue(const T& xAxisValue)
 {
 	m_isUpdateRequired = true;
@@ -126,6 +144,12 @@ inline void Function<T>::setYAxisValue(const T& yAxisValue)
 	m_yAxisValue = yAxisValue;
 }
 template<class T>
+inline void Function<T>::setAxisPosition(const sf::Vector2<T>& axisPosition)
+{
+	setXAxisValue(axisPosition.x);
+	setYAxisValue(axisPosition.y);
+}
+template<class T>
 inline T Function<T>::getXAxisValue() const
 {
 	return m_xAxisValue;
@@ -134,6 +158,12 @@ template<class T>
 inline T Function<T>::getYAxisValue() const
 {
 	return m_yAxisValue;
+}
+
+template<class T>
+inline sf::Vector2<T> Function<T>::getAxisPosition() const
+{
+	return { getXAxisValue(), getYAxisValue() };
 }
 
 template<class T>
