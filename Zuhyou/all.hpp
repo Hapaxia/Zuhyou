@@ -33,3 +33,4 @@
 #include "Grid.hpp"
 #include "Bar.hpp"
 #include "Function.hpp"
+#include "Scatter.hpp"
