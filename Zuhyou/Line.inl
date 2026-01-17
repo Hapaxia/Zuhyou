@@ -206,7 +206,7 @@ inline void Line<T>::priv_updateVertices() const
 	const std::size_t finalValueIndex{ numberOfValues - 1u };
 	for (std::size_t i{ 0u }; i <= finalValueIndex; ++i)
 	{
-		float alphaValue{ static_cast<float>(static_cast<double>(m_values[i] - m_minValue) / (m_maxValue - m_minValue)) };
+		const float alphaValue{ static_cast<float>(static_cast<double>(m_values[i] - m_minValue) / (m_maxValue - m_minValue)) };
 		const sf::Vector2f point{ i * m_size.x / finalValueIndex, (1.f - alphaValue) * m_size.y };
 		m_lineVertices[i].position = point;
 		m_lineVertices[i].color = m_lineColor;
