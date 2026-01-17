@@ -9,6 +9,7 @@ Currently includes:
 - Line graph (also doubles as an Area graph)
 - Bar graph
 - Function graph (plots "y=" function)
+- Scatter graph (with customisable point shapes)
 - Grid
 
 (more to be added...)
